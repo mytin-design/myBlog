@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+html, body {
+    background-color: rgba(240, 255, 255, 0.046);
+}
+
+/* z-index not used: property to define the stacking context of the header container;*/
+/* The header or navWrapper has position as fixed as the recommended property; sticky may function as well;  meant to stick at the top when the body elements scroll */
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: .2pc;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1pc .06pc rgba(219, 217, 217, 0.286);
+    z-index: 10;
+
+
+}
+
+.nav-img {
+    border-radius: 100pc;
+    height: 2pc;
+    width: 2pc;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 6pc;
+    padding: .3pc;
+}
+
+.flex:hover {
+    background-color: rgba(240, 248, 255, 0.932);
+}
+
+.logo {
+    width: 5pc;
+    text-decoration: none;
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Learn to use classes and ids to define styles for specific elements:
+Use element tag names where only one of such is used */
+
+ 
+.container > * {
+    padding: 1pc;
+    border-radius: .4pc;
+    box-shadow: 0 0 1pc .06pc rgba(223, 220, 220, 0.534);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 2pc;
+    grid-template-rows: auto;
+    margin: 3.5pc auto;
+    padding: 2pc 2pc;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1pc;
+}
+
+.sec {
+    padding: 1pc;
+    background-color: rgba(238, 238, 238, 0.13);
+
+}
+code {
+    color: rgb(223, 8, 8);
+}
+.sec-img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 1pc;
+}
+
+.sec-img:hover {
+    transform: scale(1.1);
+}
+
+.css-img {
+    float: right;
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1pc;
+    text-align: center;
+    height: 35vh;
+}
+
+.prof-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5pc;
+}
+
+.profile-img {
+    width: 5pc;
+    height: 5pc;
+    border-radius: 100%;
+}
+
+.profile-box, .ads {
+    position: sticky;
+    top: 10%;
+}
+
+
+.ads {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5pc;
+    height: 32ch;
+    overflow-y: scroll;
+}
+
+.adBox {
+    display: flex;
+    flex-direction: column;
+    gap: .5pc;
+    text-decoration: none;
+    color: black;
+    padding: 1pc;
+    box-shadow: 0 0 1pc .06pc rgba(219, 217, 217, 0.286);
+
+}
+
+.ad-btn {
+    display: block;
+    height: 2pc;
+    width: 7pc;
+    border: 1px solid;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(0, 0, 255, 0.712);
+    border-radius: .1pc;
+}
+
+.ad-btn:hover {
+    background-color: rgba(0, 0, 255, 0.973);
+
+}
+
+.ad-img {
+    height: 150px;
+    width: 170px;
+}
+
+.foo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10ch;
+    background: rgba(34, 31, 19, 0.905);
+}
+
+.foo > a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+/* tablet - ipad - styles for displays less than 996px */
+
+@media only screen and (max-width: 996px) {
+   .container {
+    display: block;
+   }
+
+   .profile-box {
+       position: relative;
+   }
+
+   .ads {
+       height: 40ch;
+   }
+}
+
+/* styles for screen sizes less than 500px : phones*/
+
+@media only screen and (max-width: 500px) {
+    .nav-wrapper {
+        height: 3pc;
+    }
+
+    pre {
+        width: auto;
+        overflow: scroll;
+    }
+
+    .sec-title {
+        text-align: center;
+    }
+    .sec-img {
+        float: none;
+    }
+}
